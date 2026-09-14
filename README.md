@@ -5,10 +5,10 @@
 
 🛠️ Что я изучаю
 
-☑ Основы Git (commit, push, pull)
-☑ Работа с ветками
-☑ GitHub Actions (CI/CD)
-□ Docker и контейнеризация
-□ Terraform (инфраструктура как код)
-□ Ansible (управление конфигурациями)
-□ Kubernetes
+- ☑ Основы Git (commit, push, pull)
+- ☑ Работа с ветками
+- ☑ GitHub Actions (CI/CD)
+- □ Docker и контейнеризация
+- □ Terraform (инфраструктура как код)
+- □ Ansible (управление конфигурациями)
+- □ Kubernetes
