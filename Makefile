@@ -5,22 +5,22 @@
 
 # Команда по умолчанию
 help:
-	@echo "Доступные команды"
-	@echo " make help   - показать справку "
-	@echo " make deploy - запустить скрипт деплоя "
-	@echo " make test - запустить тесты "
-	@echo " make clean - удалить временные файлы "
+	@echo "Available commands"
+	@echo " make help   - show this help "
+	@echo " make deploy - run deploy script "
+	@echo " make test - run tests "
+	@echo " make clean - remove temporary files "
 
 deploy:
-	@echo "Запуск деплоя.."
+	@echo "Running deploy.."
 	@cd scripts && ./deploy.sh
 
 test:
-	@echo "Запуск тестов.."
+	@echo "Running tests.."
 	@cd tests && ./test_deploy.sh
 
 clean:
-	@echo "Очищаю временные файлы.."
+	@echo "Cleaning temporary files.."
 	@rm -f *.log
 	@rm -rf tmp/
-	@echo "Готово"
+	@echo "Succsec"
