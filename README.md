@@ -21,10 +21,16 @@ cd my-first-devops
 
 
 # Посмотреть доступные команды 
+```
 make help 
+```
 
 # Запустить деплой
+```
 make deploy
+```
 
 # Запустить деплой в production
+```
 make deploy-prod
+```
