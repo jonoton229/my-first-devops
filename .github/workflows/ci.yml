@@ -12,3 +12,25 @@ on:
         branches: [ main, feature/github-actions ]
     pull_request:
         branches: [ main ]
+
+jobs:
+    test:
+        # На какой ос запускать
+        runs-on: ubuntu-latest
+    steps:
+        # 1 шаг скачать код из репы
+        - name: Checkout code
+          uses: action/checkout@v4
+        # 2 шаг проверить bash-скрипты линтером shellcheck
+        - name: Run shellcheck
+          uses: ludeeus/action-shellcheck@master
+          with:
+            scandir: './scripts'
+        # 3 шаг Сделать скрипты исполняемыми
+        - name: Make scripts executable
+          run: |
+            chmod +x scripts/deploy.sh 
+            chmod +x tests/test_deploy.sh
+        # 4 Запустить наши тесты
+        - name: Run tests 
+          run: ./test/test_deploy.sh
