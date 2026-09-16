@@ -1,0 +1,36 @@
+# ci.yml - Continuous Intergation pipeline
+# Что делает пайплайн
+# 1. Запускается при каждом пуше и пуле в main
+# 2. Проверяет синтаксис bash-скриптов через shellcheck
+# 3. Запускает тесты (tests/test_deploy.sh)
+
+name: CI
+
+# Когда запускай пайплайн 
+on:
+    push:
+        branches: [ main, feature/github-actions ]
+    pull_request:
+        branches: [ main ]
+
+jobs:
+    test:
+        # На какой ос запускать
+        runs-on: ubuntu-latest
+        steps:
+        # 1 шаг скачать код из репы
+        - name: Checkout code
+          uses: actions/checkout@v4
+        # 2 шаг проверить bash-скрипты линтером shellcheck
+        - name: Run shellcheck
+          uses: ludeeus/action-shellcheck@master
+          with:
+            scandir: './scripts'
+        # 3 шаг Сделать скрипты исполняемыми
+        - name: Make scripts executable
+          run: |
+            chmod +x scripts/deploy.sh 
+            chmod +x tests/test_deploy.sh
+        # 4 Запустить наши тесты
+        - name: Run tests 
+          run: ./tests/test_deploy.sh

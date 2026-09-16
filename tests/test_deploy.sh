@@ -15,7 +15,7 @@ TESTS_FAILED=0
 # Путь к скрипту деплоя
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-DEPLOY_SCRIPT="$PROJECT_ROOT/scripts(govno)/deploy.sh"
+DEPLOY_SCRIPT="$PROJECT_ROOT/scripts/deploy.sh"
 
 # Функция для проверки: печатает PASS/FAIL и увеличивает счётчики
 assert_equals() {
