@@ -14,10 +14,10 @@
 
 ## Если хотите потестить или порофлить
 ## Клонируем репозиторий
----bash
+```bash
 git clone https://github.com/jonoton229/my-first-devops
 cd my-first-devops
----
+```
 
 
 # Посмотреть доступные команды 
