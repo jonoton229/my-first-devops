@@ -1,0 +1,14 @@
+# ci.yml - Continuous Intergation pipeline
+# Что делает пайплайн
+# 1. Запускается при каждом пуше и пуле в main
+# 2. Проверяет синтаксис bash-скриптов через shellcheck
+# 3. Запускает тесты (tests/test_deploy.sh)
+
+name: CI
+
+# Когда запускай пайплайн 
+on:
+    push:
+        branches: [ main, feature/github-actions ]
+    pull_request:
+        branches: [ main ]
