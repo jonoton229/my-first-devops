@@ -13,12 +13,11 @@
 | '.github/workflows/' | CI/CD пайплайны (их тоже пока нет) |
 
 ## Если хотите потестить или порофлить
-
----bash
-# Клонируем репозиторий
+## Клонируем репозиторий
 git clone https://github.com/jonoton229/my-first-devops
 cd my-first-devops
----
+
+
 
 # Посмотреть доступные команды 
 make help 
