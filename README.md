@@ -24,4 +24,6 @@ cd my-first-devops
 ```
 make help 
 ```
+
+момент ауры
 ![А где картинка](images/koshka.jpg)
