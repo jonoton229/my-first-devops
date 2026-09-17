@@ -32,5 +32,10 @@ jobs:
             chmod +x scripts/deploy.sh 
             chmod +x tests/test_deploy.sh
         # 4 Запустить наши тесты
-        - name: Run tests 
-          run: ./tests/test_deploy.sh
+        - name: Run all tests
+          run: |
+           for test_file in tests/tests_*.sh; do
+           echo "Running: $test_file"
+           bash "$test_file"
+           done
+           
