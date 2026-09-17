@@ -34,8 +34,8 @@ jobs:
         # 4 Запустить наши тесты
         - name: Run all tests
           run: |
-           for test_file in tests/tests_*.sh; do
+           for test_file in tests/test_*.sh; do
            echo "Running: $test_file"
            bash "$test_file"
            done
-           
+
