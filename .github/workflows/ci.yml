@@ -29,8 +29,8 @@ jobs:
         # 3 шаг Сделать скрипты исполняемыми
         - name: Make scripts executable
           run: |
-            chmod +x scripts/deploy.sh 
-            chmod +x tests/test_deploy.sh
+            chmod +x scripts/*.sh
+            chmod +x tests/*.sh
         # 4 Запустить наши тесты
         - name: Run all tests
           run: |
