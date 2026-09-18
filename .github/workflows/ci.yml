@@ -29,8 +29,13 @@ jobs:
         # 3 шаг Сделать скрипты исполняемыми
         - name: Make scripts executable
           run: |
-            chmod +x scripts/deploy.sh 
-            chmod +x tests/test_deploy.sh
+            chmod +x scripts/*.sh
+            chmod +x tests/*.sh
         # 4 Запустить наши тесты
-        - name: Run tests 
-          run: ./tests/test_deploy.sh
+        - name: Run all tests
+          run: |
+           for test_file in tests/test_*.sh; do
+           echo "Running: $test_file"
+           bash "$test_file"
+           done
+
