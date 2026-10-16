@@ -61,7 +61,16 @@ else
     echo -e "${RED}✗ Verification failed gg${NC}"
     exit 1
 fi
+фывыфвыф
 
+фывыфвыффыв
+фвы
+фвы
+в
+фывыфвыффыввыф
+фвы
+ф
+ы
 echo -e "\n${GREEN}========================================${NC}"
 echo -e "${GREEN}Deployment completed successfully!${NC}"
 echo -e "${GREEN}========================================${NC}"
